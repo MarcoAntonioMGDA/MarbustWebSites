@@ -1,0 +1,60 @@
+html {
+    background: linear-gradient(90deg, rgba(1, 51, 102, 1) 0%, rgba(104, 190, 217, 1) 100%);
+
+    body {
+        background: white;
+        min-height: 100vh;
+
+        &,
+        * {
+            box-sizing: border-box;
+        }
+    }
+
+    main {
+        .page-section {
+            &:nth-of-type(even) {
+                background: #efefef;
+            }
+
+            padding: 64px 10% 25px 10%;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-align: center;
+                color: $color1;
+            }
+
+            .gray {
+                color: $color3;
+            }
+
+            hr {
+                margin: 5px auto;
+                border-color: $color2;
+            }
+
+            p {
+                color: #535353;
+
+                strong {
+                    color: #1f1f1f;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #1f354a;
+                    transition: 0.3s all;
+
+                    &:hover {
+                        color: $color1;
+                    }
+                }
+            }
+        }
+    }
+}
