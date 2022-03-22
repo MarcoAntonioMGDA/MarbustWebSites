@@ -16,6 +16,59 @@
                 a los emprendedores en la era digital; por esa razón nos esforzamos en plasmar tus ideas a la vida
                 porque creamos tu sitio web con tu propio <strong>Estilo</strong>, <strong>Dominio</strong> (nombre),
                 <strong>Hosting</strong> (Hospedaje), como una <strong>APP Web Progresiva</strong> (PWA) y más.</p>
+                <script src="https://pay.payphonetodoesposible.com/api/button/js?appId=BD8BLU1cUqLAOpNyDptvA"></script>
+                <script>
+                    let valor = 100;
+                    let sub1 = valor * 100;
+                    let payphone1 = sub1 / 94;
+                    let payphone2 = payphone1.toFixed(2);
+                    let valorf = payphone2 * 100;
+                    console.log(valorf);
+                    window.onload = function() {
+                    payphone.Button({
+                    
+                    //token obtenido desde la consola de developer
+                    token: "wA9ALagpt3wOC-dQExfaE3D1czIXTb3GTgY4erdP9naz_8z0E0ETzUkEGw73L7qH7Fs6CVD8Eqv1xP2VHT3tHApJAlI5XISQ6YOrAk7xl7IvldtVwL4YYf6RcBcIjDQZj5v3yKW-vhGFlLh79N-tYGMcltX1hY92RXwI6NyX0wOsfdqaKIzCHsrVBlOSs-A0QdYcVzYR7gW_OwUm4vv-DAgHPlaiE8SYNicuAX1ZleB34rHzS2IKUSGTRzwPnwD81WJoAHKEuQ8HcNJ9dE9Gexlu1roL3ns0TkBqHjN0Mo_tfxfWtFzhY8mG19JTTuKbtteoAHtJDQB99ic17seNqYVfNwg",
+                    
+                    //PARÁMETROS DE CONFIGURACIÓN
+                    btnHorizontal: true,
+                    btnCard: true,
+                    
+                    createOrder: function(actions){
+                    
+                    //Se ingresan los datos de la transaccion ej. monto, impuestos, etc
+                    return actions.prepare({
+                    
+                    amount: valorf,
+                    amountWithoutTax: valorf,
+                    currency: "USD",
+                    clientTransactionId: Date.now()
+                    });
+                    
+                    },
+                    onComplete: function(model, actions){
+                    
+                    //Se confirma el pago realizado
+                    actions.confirm({
+                    id: model.id,
+                    clientTxId: model.clientTxId
+                    }).then(function(value){
+                    
+                    //EN ESTA SECCIÓN SE RECIBE LA RESPUESTA Y SE MUESTRA AL USUARIO                                
+                    
+                    if (value.transactionStatus == "Approved"){
+                    alert("Pago de" + value.transactionId + " recibido, estado " + value.transactionStatus );
+                    }
+                    }).catch(function(err){
+                    console.log(err);
+                    });
+                    
+                    }
+                    }).render("#pp-button");
+                    
+                    }
+                    </script>
+                    <div id="pp-button"></div>
         </div>
     </div>
 </div>

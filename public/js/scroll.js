@@ -4,8 +4,8 @@ var about = document.getElementById("about");
 var aboutLink = document.getElementById("AboutLink");
 var services = document.getElementById("services");
 var servicesLink = document.getElementById("ServicesLink");
-var departments = document.getElementById("departments");
-var departmentsLink = document.getElementById("DepartmentsLink");
+// var departments = document.getElementById("departments");
+// var departmentsLink = document.getElementById("DepartmentsLink");
 var contact = document.getElementById("contact");
 var contactLink = document.getElementById("ContactLink");
 
@@ -18,8 +18,8 @@ function ScrollFnts() {
     var aboutFinal = aboutTop - 50;
     var servicesTop = services.offsetTop;
 	var servicesFinal = servicesTop - 50;
-    var departmentsTop = departments.offsetTop;
-	var departmentsFinal = departmentsTop - 50;
+    // var departmentsTop = departments.offsetTop;
+	// var departmentsFinal = departmentsTop - 50;
 	var contactTop = contact.offsetTop;
 	var contactFinal = contactTop - 50;
  
@@ -48,21 +48,21 @@ function ScrollFnts() {
 		servicesLink.classList.remove("link-active");
 	}
     
-    if (departmentsFinal < scrollTop) {
-        homeLink.classList.remove("link-active");
-		aboutLink.classList.remove("link-active");
-        servicesLink.classList.remove("link-active");
-		departmentsLink.classList.add("link-active");
+    // if (departmentsFinal < scrollTop) {
+    //     homeLink.classList.remove("link-active");
+	// 	aboutLink.classList.remove("link-active");
+    //     servicesLink.classList.remove("link-active");
+	// 	departmentsLink.classList.add("link-active");
 
-	} else {
-		departmentsLink.classList.remove("link-active");
-	}
+	// } else {
+	// 	departmentsLink.classList.remove("link-active");
+	// }
     
     if (contactFinal < scrollTop) {
         homeLink.classList.remove("link-active");
 		aboutLink.classList.remove("link-active");
 		servicesLink.classList.remove("link-active");
-		departmentsLink.classList.remove("link-active");
+		//departmentsLink.classList.remove("link-active");
 		contactLink.classList.add("link-active");
 
 	} else {
