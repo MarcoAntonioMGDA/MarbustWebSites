@@ -16,59 +16,6 @@
                 a los emprendedores en la era digital; por esa razón nos esforzamos en plasmar tus ideas a la vida
                 porque creamos tu sitio web con tu propio <strong>Estilo</strong>, <strong>Dominio</strong> (nombre),
                 <strong>Hosting</strong> (Hospedaje), como una <strong>APP Web Progresiva</strong> (PWA) y más.</p>
-                <script src="https://pay.payphonetodoesposible.com/api/button/js?appId=BD8BLU1cUqLAOpNyDptvA"></script>
-                <script>
-                    let valor = 100;
-                    let sub1 = valor * 100;
-                    let payphone1 = sub1 / 94;
-                    let payphone2 = payphone1.toFixed(2);
-                    let valorf = payphone2 * 100;
-                    console.log(valorf);
-                    window.onload = function() {
-                    payphone.Button({
-                    
-                    //token obtenido desde la consola de developer
-                    token: "wA9ALagpt3wOC-dQExfaE3D1czIXTb3GTgY4erdP9naz_8z0E0ETzUkEGw73L7qH7Fs6CVD8Eqv1xP2VHT3tHApJAlI5XISQ6YOrAk7xl7IvldtVwL4YYf6RcBcIjDQZj5v3yKW-vhGFlLh79N-tYGMcltX1hY92RXwI6NyX0wOsfdqaKIzCHsrVBlOSs-A0QdYcVzYR7gW_OwUm4vv-DAgHPlaiE8SYNicuAX1ZleB34rHzS2IKUSGTRzwPnwD81WJoAHKEuQ8HcNJ9dE9Gexlu1roL3ns0TkBqHjN0Mo_tfxfWtFzhY8mG19JTTuKbtteoAHtJDQB99ic17seNqYVfNwg",
-                    
-                    //PARÁMETROS DE CONFIGURACIÓN
-                    btnHorizontal: true,
-                    btnCard: true,
-                    
-                    createOrder: function(actions){
-                    
-                    //Se ingresan los datos de la transaccion ej. monto, impuestos, etc
-                    return actions.prepare({
-                    
-                    amount: valorf,
-                    amountWithoutTax: valorf,
-                    currency: "USD",
-                    clientTransactionId: Date.now()
-                    });
-                    
-                    },
-                    onComplete: function(model, actions){
-                    
-                    //Se confirma el pago realizado
-                    actions.confirm({
-                    id: model.id,
-                    clientTxId: model.clientTxId
-                    }).then(function(value){
-                    
-                    //EN ESTA SECCIÓN SE RECIBE LA RESPUESTA Y SE MUESTRA AL USUARIO                                
-                    
-                    if (value.transactionStatus == "Approved"){
-                    alert("Pago de" + value.transactionId + " recibido, estado " + value.transactionStatus );
-                    }
-                    }).catch(function(err){
-                    console.log(err);
-                    });
-                    
-                    }
-                    }).render("#pp-button");
-                    
-                    }
-                    </script>
-                    <div id="pp-button"></div>
         </div>
     </div>
 </div>
@@ -347,6 +294,56 @@
     <h2 class="tac fs25px gray"><strong>Sitios Webs:</strong></h2>
     <br>
     <div class="flex-s-a">
+        <a class="portafolio-box box-4 box-i-5 box-m-6 box-p-10" href="http://elementary.academy/" target="_blank">
+            <div class="top-arrow"></div>
+            <div class="portafolio-box-body">
+                <img src="/img/pages/portafolio/elementaryacademy.png" alt="Logo" class="mauto w50p maxw400px">
+                <h2>Elementary Academy</h2>
+                <!--<h3>Web Designer &amp; Developer</h3>-->
+                <p><i class="fas fa-calendar-alt"></i> May 2022</p>
+            </div>
+            <div class="bottom-arrow"></div>
+        </a>
+        <a class="portafolio-box box-4 box-i-5 box-m-6 box-p-10" href="http://megasuperior.com.ec" target="_blank">
+            <div class="top-arrow"></div>
+            <div class="portafolio-box-body">
+                <img src="/img/pages/portafolio/megasuperior.png" alt="Logo" class="mauto w50p maxw400px">
+                <h2>MegaSuperior</h2>
+                <!--<h3>Web Designer &amp; Developer</h3>-->
+                <p><i class="fas fa-calendar-alt"></i> Mar 2022</p>
+            </div>
+            <div class="bottom-arrow"></div>
+        </a>
+        <a class="portafolio-box box-4 box-i-5 box-m-6 box-p-10" href="http://certusecuador.com/" target="_blank">
+            <div class="top-arrow"></div>
+            <div class="portafolio-box-body">
+                <img src="/img/pages/portafolio/certus.png" alt="Logo" class="mauto w50p maxw400px">
+                <h2>Certus Ecuador</h2>
+                <!--<h3>Web Designer &amp; Developer</h3>-->
+                <p><i class="fas fa-calendar-alt"></i> Jan 2022</p>
+            </div>
+            <div class="bottom-arrow"></div>
+        </a>
+        <a class="portafolio-box box-4 box-i-5 box-m-6 box-p-10" href="https://proecu.xyz/" target="_blank">
+            <div class="top-arrow"></div>
+            <div class="portafolio-box-body">
+                <img src="/img/pages/portafolio/proecu.png" alt="Logo" class="mauto w50p maxw400px">
+                <h2>ProEcu</h2>
+                <!--<h3>Web Designer &amp; Developer</h3>-->
+                <p><i class="fas fa-calendar-alt"></i> Nov 2021</p>
+            </div>
+            <div class="bottom-arrow"></div>
+        </a>
+        <a class="portafolio-box box-4 box-i-5 box-m-6 box-p-10" href="https://pazviseg.ec/" target="_blank">
+            <div class="top-arrow"></div>
+            <div class="portafolio-box-body">
+                <img src="/img/pages/portafolio/pazviseg.png" alt="Logo" class="mauto w50p maxw400px">
+                <h2>Pazviseg</h2>
+                <!--<h3>Web Designer &amp; Developer</h3>-->
+                <p><i class="fas fa-calendar-alt"></i> Oct 2021</p>
+            </div>
+            <div class="bottom-arrow"></div>
+        </a>
         <a class="portafolio-box box-4 box-i-5 box-m-6 box-p-10" href="https://sacfinpro.com/" target="_blank">
             <div class="top-arrow"></div>
             <div class="portafolio-box-body">
